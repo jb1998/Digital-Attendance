@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.prathmeshranaut.attendancemsit.activities.LoginActivity">
+    android:orientation="vertical"
+    tools:context="Activities.LoginActivity">
 
 
 
@@ -46,5 +46,6 @@
         android:text="Sign In"
         android:id="@+id/signin_field"
         android:background="#2196F3"/>
+
 
 </LinearLayout>
