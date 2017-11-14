@@ -49,23 +49,24 @@ public class Classes_Adapter_Recycler extends RecyclerView.Adapter<Classes_Adapt
     }
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+
+        holder.graduating_year.setText(classes.get(position).getGraduating_year());
         holder.coursename.setText(classes.get(position).getName());
-        holder.subjectname.setText(classes.get(position).getSubject());
-        holder.number.setText(classes.get(position).getNumber_of_students());
+        holder.number.setText(Integer.toString(classes.get(position).getNumber_of_students()));
 
 
     }
     public static class ViewHolder extends RecyclerView.ViewHolder
     {
           TextView coursename;
-           TextView subjectname;
+           TextView graduating_year;
         TextView number;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
             coursename=(TextView)itemView.findViewById(R.id.course_name_textView);
-            subjectname=(TextView)itemView.findViewById(R.id.subject_nametextView);
+            graduating_year=(TextView)itemView.findViewById(R.id.graduating_yeartextView);
             number=(TextView)itemView.findViewById(R.id.number_of_st_textView);
 
         }

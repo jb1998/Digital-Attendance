@@ -4,6 +4,17 @@ package com.prathmeshranaut.attendancemsit.general;
 * final static constants
 * */
 public class Constants {
+
+    // this is maintained for calculating no of present
+    // for every class it will be initialized to zero
+    public static int present_ans;
+    // similarly for number of absent
+    public static  int absent_ans=0;
+
+
+
+
+
     public static final String class_table_name ="class_db";
     public static final String class_name="class_name";
     public static final String graduation_year="grad_year";

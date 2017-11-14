@@ -30,12 +30,12 @@ FloatingActionButton floatingActionButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_instance2);
+//        setContentView(R.layout.activity_add_instance2);
         add_instances=new ArrayList<>();
-        floatingActionButton=(FloatingActionButton)findViewById(R.id.floating_button);
+//        floatingActionButton=(FloatingActionButton)findViewById(R.id.floating_button);
         recyclerView = (RecyclerView) findViewById(R.id.recycle);
         recyclerView.setHasFixedSize(true);
-        adapter = new Add_instance_Adapter_Recycler(Add_instanceActivity.this,add_instances);
+//        adapter = new Add_instance_Adapter_Recycler(Add_instanceActivity.this,add_instances);
         recyclerView.setAdapter(adapter);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(Add_instanceActivity.this));
@@ -53,9 +53,9 @@ FloatingActionButton floatingActionButton;
 //                cv.put();
 //
 
-                Intent i1 = new Intent();
-                i1.setClass(Add_instanceActivity.this, Add_attendance_offline.class);
-                startActivityForResult(i1,2);
+//                Intent i1 = new Intent();
+//                i1.setClass(Add_instanceActivity.this, Add_attendance_offline.class);
+//                startActivityForResult(i1,2);
 
             }
         });
@@ -93,17 +93,17 @@ FloatingActionButton floatingActionButton;
 
         while (c.moveToNext()) {
 
-
-            int id = c.getInt(c.getColumnIndex(Constants.attendance_record_id));
-            int present=c.getInt(c.getColumnIndex(Constants.no_of_present));
-            int absent=c.getInt(c.getColumnIndex(Constants.no_of_absent));
-
-
-            String date = c.getString(c.getColumnIndex(Constants.date));
-            String time = c.getString(c.getColumnIndex(Constants.time));
-
-            Add_Instance addi = new Add_Instance(id,date, time,present,absent);
-            add_instances.add(addi);
+//
+//            int id = c.getInt(c.getColumnIndex(Constants.attendance_record_id));
+//            int present=c.getInt(c.getColumnIndex(Constants.no_of_present));
+//            int absent=c.getInt(c.getColumnIndex(Constants.no_of_absent));
+//
+//
+//            String date = c.getString(c.getColumnIndex(Constants.date));
+//            String time = c.getString(c.getColumnIndex(Constants.time));
+//
+//            Add_Instance addi = new Add_Instance(id,date, time,present,absent);
+//            add_instances.add(addi);
 
 
         }
